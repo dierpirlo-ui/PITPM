@@ -23,9 +23,9 @@ internal class Program
             }
             else
             {
-                Console.WriteLine("1. Добавить пользователяя");
+                Console.WriteLine("1. Добавить пользователя");
                 Console.WriteLine("2. Удалить пользователя");
-                Console.WriteLine("2. Найти пользователя по имени");
+                Console.WriteLine("3. Найти пользователя по имени");
                 Console.WriteLine("4. Вывести всех пользователей");
                 Console.WriteLine("5. Выйти из учетной записи");
                 Console.WriteLine("6. Выйти из программы");
@@ -93,7 +93,7 @@ internal class Program
         Console.WriteLine("Введите пароль:");
         string password = Console.ReadLine();
 
-        if (userCredentials[username] == password)
+        if (userCredentials.ContainsKey(username) && userCredentials[username] == password)
         {
             Console.WriteLine("Успешная авторизация!");
             return true;
@@ -113,11 +113,13 @@ internal class Program
         if (string.IsNullOrEmpty(username))
         {
             Console.WriteLine("Имя пользователя не может быть пустым.");
+            return;
         }
 
         if (userCredentials.ContainsKey(username))
         {
             Console.WriteLine("Пользователь с таким именем уже существует.");
+            return;
         }
 
         Console.WriteLine("Введите пароль:");
@@ -126,6 +128,7 @@ internal class Program
         if (password.Length < 8)
         {
             Console.WriteLine("Пароль слишком короткий. Минимум 8 символов.");
+            return;
         }
 
         userCredentials.Add(username, password);
@@ -136,6 +139,11 @@ internal class Program
     {
         Console.WriteLine("Введите имя пользователя:");
         string name = Console.ReadLine();
+        if (string.IsNullOrEmpty(name))
+        {
+            Console.WriteLine("Имя пользователя не может быть пустым.");
+            return;
+        }
 
         Console.WriteLine("Введите возраст пользователя:");
 
@@ -144,6 +152,7 @@ internal class Program
         if (age < 0)
         {
             Console.WriteLine("Возраст не может быть отрицательным.");
+            return;
         }
 
         users.Add(new User(name, age));
@@ -178,7 +187,7 @@ internal class Program
 
         if (userFound != null)
         {
-            Console.WriteLine("Найден пользователь: {userFound.Name}, возраст {userFound.age}");
+            Console.WriteLine($"Найден пользователь: {userFound.Name}, возраст {userFound.Age}");
         }
         else
         {
@@ -191,10 +200,10 @@ internal class Program
         if (users.Count == 0)
         {
             Console.WriteLine("Список пользователей пуст.");
-            return
+            return;
             }
 
-        for (int i = 0; i <= users.Count; i++)
+        for (int i = 0; i < users.Count; i++)
         {
             Console.WriteLine($"Имя: {users[i].Name}, Возраст: {users[i].Age}");
         }

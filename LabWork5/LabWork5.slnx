@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Элементы решения/">
+    <File Path=".gitignore" />
+  </Folder>
   <Project Path="OrderLIb.Tests/OrderLIb.Tests.csproj" />
   <Project Path="OrderLib/OrderLib.csproj" />
 </Solution>

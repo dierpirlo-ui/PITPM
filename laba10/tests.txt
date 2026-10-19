@@ -1,0 +1,48 @@
+namespace PasswordValidator.Tests
+{
+    public class PasswordValidatorTests
+    {
+        [Theory]
+        [InlineData("Password1")]
+        [InlineData("qwertyu1")]
+        [InlineData("QWERTYU1")]
+        [InlineData("asd1fghj")]
+        [InlineData("1234567a")]
+        public void IsValid_ValidPasswords_ReturnsTrue(string password)
+        {
+            Assert.True(PasswordValidator.IsValid(password));
+        }
+        
+        [Theory]
+        [InlineData("")]
+        [InlineData("a1")]
+        [InlineData("abc1234")]
+        public void IsValid_TooShort_ReturnsFalse(string password)
+        {
+            Assert.False(PasswordValidator.IsValid(password));
+        }
+
+        [Theory]
+        [InlineData("qwertyui")]
+        [InlineData("QWERTYUI")]
+        public void IsValid_NoDigit_ReturnsFalse(string password)
+        {
+            Assert.False(PasswordValidator.IsValid(password));
+        }
+
+        [Theory]
+        [InlineData("12345678")]
+        [InlineData("пароль123")]
+        [InlineData("ПАРОЛЬ123")]
+        public void IsValid_NoLatin_ReturnsFalse(string password)
+        {
+            Assert.False(PasswordValidator.IsValid(password));
+        }
+
+        [Fact]
+        public void IsValid_Null_ReturnsFalse()
+        {
+            Assert.False(PasswordValidator.IsValid(null));
+        }
+    }
+}

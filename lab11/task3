@@ -53,3 +53,5 @@ export default function () {
   });
   check(response, { 'status is 200': (r) => r.status === 200 });
 }
+// запуск 
+k6 run -e USERS=10  stress.js

@@ -1,0 +1,55 @@
+using System.Security.Cryptography;
+ 
+var builder = WebApplication.CreateBuilder(args);
+builder.Logging.SetMinimumLevel(LogLevel.Warning);
+builder.WebHost.ConfigureKestrel(options => options.Limits.MaxRequestBodySize = 4096);
+var app = builder.Build();
+ 
+app.MapPost("/password-hashes", (HashRequest request) =>
+{
+    if (string.IsNullOrWhiteSpace(request.Password) || request.Password.Length > 256)
+        return Results.BadRequest(new { error = "Password must contain 1 to 256 characters and not be whitespace." });
+ 
+    const int iterations = 600_000;
+    var salt = RandomNumberGenerator.GetBytes(16);
+    var hash = Rfc2898DeriveBytes.Pbkdf2(
+        request.Password, salt, iterations, HashAlgorithmName.SHA256, 32);
+ 
+    return Results.Ok(new
+    {
+        algorithm = "PBKDF2-SHA256",
+        iterations,
+        salt = Convert.ToBase64String(salt),
+        hash = Convert.ToBase64String(hash)
+    });
+});
+ 
+app.Run("http://localhost:5080");
+ 
+record HashRequest(string? Password);
+
+//сценарий
+import http from 'k6/http';
+import { check } from 'k6';
+
+const USERS = parseInt(__ENV.USERS || '10');
+
+export const options = {
+  vus: USERS,
+  duration: '15s',
+  thresholds: {
+    http_req_failed: ['rate<0.01'],
+    http_req_duration: ['p(95)<500'],
+  },
+};
+
+const url = 'http://localhost:5080/password-hashes';
+const body = JSON.stringify({ password: 'LoadTest-Only-2026!' });
+
+export default function () {
+  const response = http.post(url, body, {
+    headers: { 'Content-Type': 'application/json' },
+    timeout: '2s',
+  });
+  check(response, { 'status is 200': (r) => r.status === 200 });
+}

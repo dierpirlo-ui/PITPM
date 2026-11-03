@@ -1,0 +1,103 @@
+using NotificationLib.Models;
+
+namespace NotificationLib;
+
+public class NotificationFilter
+{
+    public IEnumerable<Notification> Apply(
+        IEnumerable<Notification> notifications,
+        NotificationFilterOptions options)
+    {
+        var result = notifications;
+
+        if (options.IsRead is not null)
+            result = result.Where(n => n.IsRead == options.IsRead.Value);
+
+        if (options.Types is { Length: > 0 })
+            result = result.Where(n => options.Types.Contains(n.Type));
+
+        if (!string.IsNullOrWhiteSpace(options.SearchText))
+        {
+            string text = options.SearchText.Trim();
+            result = result.Where(n =>
+                (n.Title?.Contains(text, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (n.Content?.Contains(text, StringComparison.OrdinalIgnoreCase) ?? false));
+        }
+
+        if (options.MinPriority is not null)
+            result = result.Where(n => n.Priority >= options.MinPriority.Value);
+
+        return result;
+    }
+}
+
+
+
+
+
+using NotificationLib.Models;
+
+namespace NotificationLib;
+
+public class NotificationSorter
+{
+    public IEnumerable<Notification> Sort(
+        IEnumerable<Notification> notifications,
+        NotificationFilterOptions options)
+    {
+        if (options.SortBy is null)
+            return notifications;
+
+        return options.SortBy.Value switch
+        {
+            SortNotificationBy.Date => options.Descending
+                ? notifications.OrderByDescending(n => n.CreatedAt)
+                : notifications.OrderBy(n => n.CreatedAt),
+
+            SortNotificationBy.Priority => options.Descending
+                ? notifications.OrderByDescending(n => n.Priority)
+                : notifications.OrderBy(n => n.Priority),
+
+            SortNotificationBy.Title => options.Descending
+                ? notifications.OrderByDescending(n => n.Title, StringComparer.OrdinalIgnoreCase)
+                : notifications.OrderBy(n => n.Title, StringComparer.OrdinalIgnoreCase),
+
+            _ => throw new ArgumentOutOfRangeException(
+                nameof(options), options.SortBy, "Неизвестное поле сортировки.")
+        };
+    }
+}
+
+
+using NotificationLib.Models;
+
+namespace NotificationLib;
+
+public class NotificationService
+{
+    private readonly NotificationFilter _filter;
+    private readonly NotificationSorter _sorter;
+
+    public NotificationService() : this(new NotificationFilter(), new NotificationSorter()) { }
+
+    public NotificationService(NotificationFilter filter, NotificationSorter sorter)
+    {
+        _filter = filter ?? throw new ArgumentNullException(nameof(filter));
+        _sorter = sorter ?? throw new ArgumentNullException(nameof(sorter));
+    }
+
+    /// <summary>
+    /// Фильтрует уведомления по опциям и сортирует результат.
+    /// Входная коллекция не изменяется.
+    /// </summary>
+    public IEnumerable<Notification> FilterAndSort(
+        IEnumerable<Notification> notifications,
+        NotificationFilterOptions options)
+    {
+        if (notifications is null) throw new ArgumentNullException(nameof(notifications));
+        if (options is null) throw new ArgumentNullException(nameof(options));
+
+        var filtered = _filter.Apply(notifications, options);
+        return _sorter.Sort(filtered, options);
+    }
+}

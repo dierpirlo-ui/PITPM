@@ -6,49 +6,80 @@
         <mxCell id="1" parent="0"/>
         <!-- Начало -->
         <mxCell id="start1" value="Начало" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="320" y="60" width="120" height="40" as="geometry"/>
+          <mxGeometry x="320" y="40" width="120" height="40" as="geometry"/>
         </mxCell>
         <!-- Ввод данных -->
         <mxCell id="data1" value="order" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="320" y="140" width="120" height="80" as="geometry"/>
+          <mxGeometry x="320" y="120" width="120" height="80" as="geometry"/>
         </mxCell>
-        <!-- Комментарий к вводу -->
+        <!-- Комментарий -->
         <mxCell id="comm1_line" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="data1" target="comm1_box">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="comm1_box" value="CalculateOrderTotal(order)&#xa;Вход: объект заказа order" style="shape=partialRectangle;whiteSpace=wrap;html=1;right=0;fillColor=none;strokeWidth=1.5;strokeColor=#000000;align=left;spacingLeft=6;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="480" y="140" width="210" height="80" as="geometry"/>
+        <mxCell id="comm1_box" value="CalculateOrderTotal(order)" style="shape=partialRectangle;whiteSpace=wrap;html=1;right=0;fillColor=none;strokeWidth=1.5;strokeColor=#000000;align=left;spacingLeft=6;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="120" width="180" height="80" as="geometry"/>
         </mxCell>
-        <!-- Процесс 1: subtotal -->
-        <mxCell id="proc1" value="subtotal = Σ(item.Quantity * item.UnitPrice)" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="320" y="260" width="120" height="80" as="geometry"/>
+        <!-- Подготовка цикла -->
+        <mxCell id="prep1" value="subtotal = 0&#xa;i = 0" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="320" y="240" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Условие цикла -->
+        <mxCell id="dec_loop" value="i &lt; order.Items.Count" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="320" y="360" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Тело цикла (Да) -->
+        <mxCell id="proc_loop" value="item = order.Items[i]&#xa;subtotal += item.Quantity * item.UnitPrice&#xa;i = i + 1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="320" y="480" width="120" height="80" as="geometry"/>
         </mxCell>
         <!-- Предопределенный процесс: CalculateDiscount -->
         <mxCell id="sub1" value="discount = CalculateDiscount&#xa;(order.Customer, subtotal)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.15;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="320" y="380" width="120" height="80" as="geometry"/>
+          <mxGeometry x="320" y="610" width="120" height="80" as="geometry"/>
         </mxCell>
         <!-- Вывод результата -->
         <mxCell id="data2" value="subtotal - discount" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="320" y="500" width="120" height="80" as="geometry"/>
+          <mxGeometry x="320" y="730" width="120" height="80" as="geometry"/>
         </mxCell>
         <!-- Конец -->
         <mxCell id="end1" value="Конец" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="320" y="620" width="120" height="40" as="geometry"/>
+          <mxGeometry x="320" y="850" width="120" height="40" as="geometry"/>
         </mxCell>
-        <!-- Соединения (сверху вниз без стрелок по ГОСТ 19.701-90) -->
+        <!-- Соединения -->
         <mxCell id="e1" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="start1" target="data1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e2" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="data1" target="proc1">
+        <mxCell id="e2" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="data1" target="prep1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e3" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="proc1" target="sub1">
+        <mxCell id="e3" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="prep1" target="dec_loop">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e4" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sub1" target="data2">
+        <mxCell id="e4" value="Да" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;align=left;spacingLeft=4;" edge="1" parent="1" source="dec_loop" target="proc_loop">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e5" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="data2" target="end1">
+        <!-- Возврат цикла снизу вверх (со стрелкой по ГОСТ 19.701-90) -->
+        <mxCell id="e_loop_back" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="proc_loop">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="340" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="270" y="520"/>
+              <mxPoint x="270" y="340"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- Выход из цикла (Нет) -->
+        <mxCell id="e_loop_exit" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;verticalAlign=bottom;" edge="1" parent="1" source="dec_loop" target="sub1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="400"/>
+              <mxPoint x="490" y="585"/>
+              <mxPoint x="380" y="585"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sub1" target="data2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="data2" target="end1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
       </root>
@@ -59,50 +90,39 @@
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <!-- Начало -->
         <mxCell id="s_start" value="Начало" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="320" y="50" width="120" height="40" as="geometry"/>
         </mxCell>
-        <!-- Данные -->
         <mxCell id="s_data" value="customer,&#xa;subtotal" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="320" y="130" width="120" height="80" as="geometry"/>
         </mxCell>
-        <!-- Комментарий -->
         <mxCell id="s_comm_l" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_data" target="s_comm_b">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="s_comm_b" value="Подпрограмма&#xa;CalculateDiscount" style="shape=partialRectangle;whiteSpace=wrap;html=1;right=0;fillColor=none;strokeWidth=1.5;strokeColor=#000000;align=left;spacingLeft=6;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="480" y="130" width="160" height="80" as="geometry"/>
         </mxCell>
-        <!-- Решение 1 -->
         <mxCell id="s_dec1" value="customer.IsPremium&#xa;&amp;&amp; subtotal &gt; 1000" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="320" y="250" width="120" height="80" as="geometry"/>
         </mxCell>
-        <!-- Ветвь Да 1 -->
         <mxCell id="s_proc1" value="discount =&#xa;subtotal * 0.1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="520" y="250" width="120" height="80" as="geometry"/>
         </mxCell>
-        <!-- Решение 2 (ветвь Нет 1) -->
         <mxCell id="s_dec2" value="PromoCode&#xa;не пуст?" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="320" y="380" width="120" height="80" as="geometry"/>
         </mxCell>
-        <!-- Ветвь Да 2 (Предопределенный процесс) -->
         <mxCell id="s_sub2" value="discount = ApplyPromoCode&#xa;(customer.PromoCode, subtotal)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.15;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="520" y="380" width="120" height="80" as="geometry"/>
         </mxCell>
-        <!-- Ветвь Нет 2 -->
         <mxCell id="s_proc0" value="discount = 0" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="320" y="510" width="120" height="80" as="geometry"/>
         </mxCell>
-        <!-- Вывод discount -->
         <mxCell id="s_out" value="discount" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=20;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="320" y="640" width="120" height="80" as="geometry"/>
         </mxCell>
-        <!-- Конец -->
         <mxCell id="s_end" value="Конец" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="320" y="760" width="120" height="40" as="geometry"/>
         </mxCell>
-        <!-- Связи -->
         <mxCell id="se1" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_start" target="s_data">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
@@ -124,7 +144,6 @@
         <mxCell id="se7" value="" style="endArrow=none;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_proc0" target="s_out">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <!-- Объединение линий со смещением (п. 4.2.3 ГОСТ 19.701-90) -->
         <mxCell id="se8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.5;strokeColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="s_proc1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="380" y="610" as="targetPoint"/>

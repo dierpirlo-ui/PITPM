@@ -1,0 +1,322 @@
+<mxfile host="app.diagrams.net" agent="5.0" version="24.0.0">
+  <diagram id="idef0-a-0" name="A-0 (Контекстная)">
+    <mxGraphModel dx="1100" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Рамка стандартного бланка IDEF0 -->
+        <mxCell id="frame1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1089" height="760" as="geometry"/>
+        </mxCell>
+        <!-- Верхний штамп -->
+        <mxCell id="top_stamp" value="Используется в: Учебный процесс | Автор: Студент | Проект: Модульное тестирование в xUnit | Статус: Рабочая версия | Контекст: TOP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1089" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Нижний штамп -->
+        <mxCell id="bot_node" value="Узел: А-0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="750" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="bot_title" value="Заголовок: Выполнить модульное тестирование программного модуля" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="750" width="729" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="bot_num" value="Номер: 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="949" y="750" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Блок A0 -->
+        <mxCell id="block_a0" value="Выполнить модульное&#xa;тестирование программного модуля" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="460" y="320" width="240" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="num_a0" value="0" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=bottom;whiteSpace=wrap;rounded=0;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="415" width="25" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Входы (Input) -->
+        <mxCell id="in1" value="Исходный код проверяемого модуля" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="350" as="sourcePoint"/>
+            <mxPoint x="460" y="350" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="in2" value="Шаблон отчёта" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="410" as="sourcePoint"/>
+            <mxPoint x="460" y="410" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Управление (Control) -->
+        <mxCell id="ctrl1" value="Список проверяемых задач" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;align=right;spacingRight=6;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="130" as="sourcePoint"/>
+            <mxPoint x="530" y="320" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ctrl2" value="Требования к оформлению" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;align=left;spacingLeft=6;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="130" as="sourcePoint"/>
+            <mxPoint x="630" y="320" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Выход (Output) -->
+        <mxCell id="out1" value="Оформленный краткий отчёт&#xa;о результатах проверки" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="380" as="sourcePoint"/>
+            <mxPoint x="1030" y="380" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Механизмы (Mechanism) -->
+        <mxCell id="mech1" value="Студент" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;align=right;spacingRight=6;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="610" as="sourcePoint"/>
+            <mxPoint x="530" y="440" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mech2" value="Среда разработки и фреймворк xUnit" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;align=left;spacingLeft=6;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="610" as="sourcePoint"/>
+            <mxPoint x="630" y="440" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Цель и точка зрения -->
+        <mxCell id="goal_vp" value="ЦЕЛЬ: формализовать процесс модульного тестирования программного модуля в xUnit и подготовки отчётной документации.&#xa;ТОЧКА ЗРЕНИЯ: студент-разработчик (тестировщик)." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="670" width="900" height="50" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="idef0-a0" name="A0 (Декомпозиция 1-го уровня)">
+    <mxGraphModel dx="1100" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Рамка -->
+        <mxCell id="f2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1089" height="760" as="geometry"/>
+        </mxCell>
+        <mxCell id="ts2" value="Используется в: А-0 | Автор: Студент | Проект: Модульное тестирование в xUnit | Статус: Рабочая версия" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1089" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="bn2" value="Узел: А0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="750" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="bt2" value="Заголовок: Выполнить модульное тестирование программного модуля" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="750" width="729" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="bnum2" value="Номер: 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="949" y="750" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Блок A1 -->
+        <mxCell id="b_a1" value="Проанализировать код и&#xa;разработать модульные тесты" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="210" width="190" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_a1" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=bottom;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="405" y="278" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Блок A2 -->
+        <mxCell id="b_a2" value="Выполнить тестирование&#xa;модуля в xUnit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="360" width="190" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_a2" value="2" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=bottom;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="428" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref_a2" value="А2" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=top;fontFamily=Times New Roman;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="665" y="452" width="25" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Блок A3 -->
+        <mxCell id="b_a3" value="Оформить отчёт о&#xa;результатах проверки" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="770" y="510" width="190" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_a3" value="3" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=bottom;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="935" y="578" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Граничные входы (I1, I2) -->
+        <mxCell id="a0_i1" value="Исходный код модуля" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;verticalAlign=bottom;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="255" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a0_i1_to_a2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="255" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="160" y="423"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a0_i2" value="Шаблон отчёта" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;verticalAlign=bottom;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="573" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Граничные управления (C1, C2) -->
+        <mxCell id="a0_c1" value="Список проверяемых задач" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335" y="100" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a0_c1_to_a2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;entryX=0.7;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335" y="150" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="633" y="150"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a0_c2" value="Требования к оформлению" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="865" y="100" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Внутренние связи -->
+        <mxCell id="int_1_2" value="Набор модульных тестов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_a1" target="b_a2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="int_2_3" value="Протокол и результаты тестов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_a2" target="b_a3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Обратная связь при провале тестов -->
+        <mxCell id="fb_2_1" value="Выявленные дефекты / корректировки" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;exitX=1;exitY=0.8;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_a2" target="b_a1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="432"/>
+              <mxPoint x="720" y="180"/>
+              <mxPoint x="392" y="180"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- Выход (O1) -->
+        <mxCell id="a0_o1" value="Оформленный краткий отчёт" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;verticalAlign=bottom;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="b_a3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="555" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Механизмы (M1, M2) -->
+        <mxCell id="a0_m1" value="Студент" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="297" y="710" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a0_m1_2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="297" y="650" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="557" y="650"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a0_m1_3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="557" y="650" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="827" y="650"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a0_m2" value="IDE, xUnit, текстовый редактор" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;entryX=0.7;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="633" y="710" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a0_m2_3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;entryX=0.7;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="633" y="680" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="903" y="680"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="idef0-a2" name="A2 (Декомпозиция блока A2)">
+    <mxGraphModel dx="1100" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="f3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1089" height="760" as="geometry"/>
+        </mxCell>
+        <mxCell id="ts3" value="Используется в: А0 | Автор: Студент | Проект: Модульное тестирование в xUnit | Статус: Рабочая версия" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1089" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="bn3" value="Узел: А2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="750" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="bt3" value="Заголовок: Выполнить тестирование модуля в xUnit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="750" width="729" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="bnum3" value="Номер: 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontFamily=Times New Roman;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="949" y="750" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Блок A21 -->
+        <mxCell id="b_a21" value="Скомпилировать проект и&#xa;тестовую сборку" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="210" width="190" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_a21" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=bottom;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="405" y="278" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Блок A22 -->
+        <mxCell id="b_a22" value="Запустить тестовый прогон&#xa;в Test Runner xUnit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="360" width="190" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_a22" value="2" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=bottom;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="428" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Блок A23 -->
+        <mxCell id="b_a23" value="Зафиксировать результаты&#xa;прохождения тестов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="770" y="510" width="190" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_a23" value="3" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=bottom;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="935" y="578" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <!-- Входы с ICOM-кодами -->
+        <mxCell id="a2_i1" value="I1: Набор модульных тестов" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;verticalAlign=bottom;entryX=0;entryY=0.35;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="241" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a2_i2" value="I2: Исходный код модуля" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;verticalAlign=bottom;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="273" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Управление -->
+        <mxCell id="a2_c1" value="C1: Список проверяемых задач" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="865" y="100" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Внутренние связи -->
+        <mxCell id="a2_int1" value="Скомпилированные сборки (.dll)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_a21" target="b_a22">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a2_int2" value="Лог выполнения тестов (Passed/Failed)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_a22" target="b_a3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Выходы -->
+        <mxCell id="a2_o1" value="O1: Протокол и результаты тестов" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;verticalAlign=bottom;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="b_a23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="555" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Механизмы -->
+        <mxCell id="a2_m1" value="M1: Студент" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="865" y="710" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a2_m2" value="M2: Компилятор и xUnit Runner" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335" y="710" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a2_m2_2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=1.5;strokeColor=#000000;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="b_a22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335" y="660" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="595" y="660"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -42,14 +42,14 @@
     "title": "Подготовка (ГОСТ 19.701-90)"
   },
   {
-    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"Начало\" style=\"rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;\" vertex="1\" parent=\"1\"&gt;&lt;mxGeometry width=\"120\" height=\"40\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"Начало\" style=\"rounded=1;whiteSpace=wrap;html=1;arcSize=50;strokeWidth=1.5;fontFamily=Times New Roman;fontSize=12;fillColor=#ffffff;strokeColor=#000000;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"120\" height=\"40\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
     "w": 120,
     "h": 40,
     "aspect": "fixed",
     "title": "Терминатор (ГОСТ 19.701-90)"
   },
   {
-    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"\" style=\"endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#000000;\" edge=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"50\" height=\"50\" relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint y=\"40\" as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"40\" y=\"40\" as=\"targetPoint\"/&gt;&lt;mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\"3\" value=\"Комментарий\" style=\"shape=partialRectangle;whiteSpace=wrap;html=1;right=0;fillColor=none;strokeWidth=1.5;strokeColor=#000000;align=left;spacingLeft=6;fontFamily=Times New Roman;fontSize=12;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry x=\"40\" width=\"100\" height=\"80\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;mxCell id=\"2\" value=\"\" style=\"endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#000000;\" edge=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"50\" height=\"50\" relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint y=\"40\" as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"40\" y=\"40\" as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\"3\" value=\"Комментарий\" style=\"shape=partialRectangle;whiteSpace=wrap;html=1;right=0;fillColor=none;strokeWidth=1.5;strokeColor=#000000;align=left;spacingLeft=6;fontFamily=Times New Roman;fontSize=12;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry x=\"40\" width=\"100\" height="80\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
     "w": 140,
     "h": 80,
     "aspect": "fixed",
